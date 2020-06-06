@@ -1,11 +1,39 @@
 <html>
 <head>
 	<title>TFPS EQUIPMENTS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+	
 </head>
 <body>
-	<h1>WELCOME TO TFPS</h1>
-	<a href="register.php"><h3>New User Register</h3></a>
+	<div class="topnav" id="myTopnav">
+	<a href="register.php" class="active">Home</a>
+	<a href="register.php"><h3>Register</h3></a>
 	<a href="equipments.php"><h3>View Equipments</h3></a>
-	<a href="./qrDNT"><h3>Borrow an Equipment</h3></a>
+	<a href="./qrDNT"><h3>Borrow </h3></a>
+	<a href="javascript:void(0);" class="icon"
+	onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
+
+
+<script>
+	function myFunction() {
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "topnav") {
+		x.className += " responsive";
+	  } else {
+		x.className = "topnav";
+	  }
+	}
+	</script>
+
 </body>
 </html>
