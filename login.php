@@ -26,6 +26,5 @@
            	<input type="hidden" name="prodid3" value="<?php echo $prodid2; ?>">
     </div>
 	</form>
-	<h4>Not a member? <a href="register.php">Sign Up</a></h4>
 </body>
 </form>

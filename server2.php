@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	$conn = mysqli_connect("localhost", "id13505562_root", "#Kgptoor1234", "id13505562_camera");
+	$conn = mysqli_connect("localhost", "root", "toorkgp12", "tfpsqr");
 	$errors = array();
 
 if (isset($_POST['login_btn'])) {

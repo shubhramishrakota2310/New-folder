@@ -9,7 +9,7 @@
                     <a href="index.html"><button type="submit">Back</button></a>
                     <?php
                     $prodid = $_POST[noijazah];
-                    $konek = mysqli_connect("localhost","root","toorkgp12","tfpsqr");
+                    $konek = mysqli_connect("localhost", "root", "toorkgp12", "tfpsqr");
                     $sql=mysqli_query($konek, "SELECT * FROM equipments WHERE id='$_POST[noijazah]'");
                     $d=mysqli_fetch_array($sql);
                     
@@ -39,7 +39,7 @@
                         <input type="hidden" name="prodid1" value="<?php echo $prodid; ?>">
                      </div>
                     <div class="input">
-                          <button type="submit" class="btn" name="login_btn">Login</button>
+                          <button type="submit" class="btn" name="login_btn">PROCEED</button>
                     </div>
                 </form>
                     

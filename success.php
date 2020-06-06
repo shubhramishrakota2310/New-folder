@@ -23,7 +23,6 @@
 				<h1><?php echo $_SESSION['user']['name'] ?> Your Account is successfully created.</h1>
 				<br>
 				<h3>This page will automatically redirect.</h3> 
-				<a href="<?php echo 'logout.php'; ?>" class="logout-btn">Logout</a>
 			</div>
 <?php endif ?>
 

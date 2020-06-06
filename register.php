@@ -38,6 +38,5 @@
 		</div>
 	</form>
 
-	<h4>Already a user? <a href="login.php">Login</a></h4>
 </body>
 </form>
