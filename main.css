@@ -8,6 +8,12 @@
 		  overflow: hidden;
 		  background-color: #333;
 		}
+		.topnav img{
+			width: 6em;
+			height: auto;
+			float: left;
+		
+		}
 		
 		.topnav a {
 		  float: right;
@@ -53,5 +59,280 @@
 			display: block;
 			text-align: left;
 		  }
+		}
+
+		.hero-bg {
+			background: #4B68A8 url('bg.svg');
+			background-size: cover;
+			color: #333;
+			text-align: center;
+			padding-bottom: 4em;
+		}
+		
+		header {
+			padding: 1em 0;
+		}
+		
+		.hero-bg a {
+			color: #333;
+			text-decoration: none;
+			
+		}
+		
+		
+		
+		section {
+			margin: 0 ;
+		}
+		
+		h1 {
+			font-size: 2.5rem;
+			margin: 2em 0 1.2em;
+		}
+		
+		h1 span {
+			text-transform: uppercase;
+			display: block;
+			font-size: 1.4rem;
+			position: relative;
+			z-index: 1;
+		}
+		
+		h1 span::before {
+			content: ' ';
+			position: absolute;
+			width: 4em;
+			background: #4B68A8;
+			height: .4em;
+			bottom: 0;
+			z-index: -1;
+			margin-left: -.3em;
+		}
+		
+		.hero-bg p {
+			font-weight: bolder;
+			margin: 0 1em 3em;
+		}
+		
+		.form-container {
+			background-color: #CDECE6;
+			margin: 0 0 0;
+			
+		}
+		
+		label {
+			color: #4B68A8;
+			font-weight: bold;
+			display: block;
+			
+			font-size: 1.2em;
+		}
+		
+		input[type=text] {
+			border: 1px solid #707071;
+			width: 80%;
+			padding: 1em;
+			box-sizing: border-box;
+			border-radius: .5em;
+			margin-top: 1.2em;
+		}
+		
+		.form-container p {
+			color: gray;
+			margin-bottom: 1.5em;
+			font-weight: normal;
+			font-size: .9em;
+			margin-top: .3em;
+		}
+		
+		input[type=button] {
+			background-color: #4B68A8;
+			border: none;
+			width: 80%;
+			color: white;
+			font-weight: bold;
+			padding: 1em 0;
+			border-radius: .5em;
+			font-size: 1.3em;
+			cursor: pointer;
+		}
+		
+		input[type=button]:hover {
+			background-color: #FDC1B5;
+		}
+		
+		.authentic {
+			margin: 0;
+			padding: 0;
+			float: left;
+		}
+		
+		.right-col {
+			text-align: center;
+			margin: 0;
+		}
+		
+		h2 {
+			text-transform: uppercase;
+			position: relative;
+		}
+		
+		h2::before {
+			content: ' ';
+			position: absolute;
+			width: 8em;
+			background: #4B68A8;
+			height: .4em;
+			bottom: 0;
+			z-index: -1;
+			margin-left: -.3em;
+		}
+		
+		img {
+			width: 100%;
+			align-self: center;
+			padding: 0;
+
+			
+		}
+		
+		p {
+			line-height: var(--leading);
+		}
+		
+		.overlay {
+			position: absolute;
+			height: 100vh;
+			width: 100%;
+			background: rgba(0,0,0,.9);
+			z-index: 1;
+			place-content: center;
+			color: white;
+			display: none;
+			opacity: 0;
+		}
+		
+		.animate-overlay {
+			animation: overlay 3s forwards;
+		}
+		
+		@media (min-width: 730px) {
+		
+			section {
+				margin: 0 ;
+			}
+			.form-container {
+				margin: 2em -4em 0;
+			}
+		
+		}
+		
+		@media (min-width: 930px) {
+		
+			.hero-bg {
+				text-align: left;
+				
+			}
+
+			.hero-bg img{
+				display: none;
+			}
+		
+			.hero-bg p {
+				margin: 0 0 3em;
+			}
+		
+			.hero-bg section {
+				width: 65%;
+			}
+		
+			.form-container {
+				background-color: white;
+				margin: 2em 0 0;
+				padding: 2em;
+				border-radius: .5em;
+				box-shadow: 10px 10px 10px rgba(0,0,0,.3);
+			}
+		
+			form {
+				display: flex;
+			}
+			.form-left {
+				width: 70%;
+			}
+			label {
+				margin: 0;
+			}
+			input[type="button"] {
+				height: fit-content;
+				font-size: 1.1em;
+				margin-left: 1em;
+				margin-top: 2.2em;
+				padding: .7em 0;
+				width: 30%;
+			}
+			.hero-bg p {
+				margin-bottom: 0;
+			}
+		
+			section.authentic {
+				display: grid;
+				grid-template-columns: repeat(2, 50%);
+				grid-template-areas:
+					"bowl content";
+			}
+		
+			.right-col {
+				grid-area: content;
+				padding: 0 10%;
+				text-align: left;
+				align-self: center;
+			}
+		
+			img {
+				grid-area: bowl;
+			}
+		
+			h2 {
+				margin: 0;
+			}
+		
+		}
+		
+		@media (min-width: 1275px) { 
+			.hero-bg section {
+				width: 45%;
+				margin: 0 15%;
+			}
+		}
+		
+		.top {
+			animation: fadeIn 2s forwards;
+		}
+		
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+				transform: translateY(-2em);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+		
+		@keyframes overlay {
+			0% {
+				opacity: 0;
+			}
+			30% {
+				opacity: 1;
+			}
+			70% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+			}
 		}
 		
