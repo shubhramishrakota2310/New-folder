@@ -2,11 +2,25 @@
 <html>
 <head>
 <title>Borrow Equipment | TFPS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <body>
-    <h1>Scan the QR code of the Equipment</h1>
 <div class="container">
+<div class="topnav" id="myTopnav">
+	<a href="../equipments.php"><h3>View Equipments</h3></a>
+	<a href="../qrDNT"><h3>Borrow </h3></a>
+	<a href="../register.php"><h3>Sign up</h3></a>
+	<a href="../login.php"><h3>Sign in</h3></a>
+	<a href="javascript:void(0);" class="icon"
+	onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+    <h4> <span>Scan the QR code </span> of the Equipment</h4>
+
 <div class="row">
   <div class="col-md-4 col-md-offset-4">
     <div class="panel panel-danger">
@@ -60,5 +74,33 @@
     });
 
 </script>
+
+
+<script>
+
+let btn= document.getElementById('cda-btn');
+
+btn.addEventListener('click', () => {
+	 
+
+})
+
+
+
+</script>
+
+
+
+
+<script>
+	function myFunction() {
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "topnav") {
+		x.className += " responsive";
+	  } else {
+		x.className = "topnav";
+	  }
+	}
+	</script>
 </body>
 </html>

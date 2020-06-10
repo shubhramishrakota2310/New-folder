@@ -2,12 +2,34 @@
 <html>
 <head>
 <title>TFPS | Equipments</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
+<div class="topnav" id="myTopnav">
+	<a href="#"><img src="TFPS_Logo-1.png" alt=""></a>
+	<a href="equipments.php"><h3>View Equipments</h3></a>
+	<a href="./qrDNT"><h3>Borrow </h3></a>
+	<a href="register.php"><h3>Sign up</h3></a>
+	<a href="login.php"><h3>Sign in</h3></a>
+	<a href="javascript:void(0);" class="icon"
+	onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
 <?php
 echo "<table style='border: solid 1px black;'>";
- echo "<tr><th>Product Id</th><th>Category</th><th>Name</th><th>Owner</th><th>Currently With</th><th>Contact No.</th><th>Borrowed On</th></tr>";
+ echo "<tr>
+ <th>Product Id</th>
+ <th>Category</th>
+ <th>Name</th>
+ <th>Owner</th>
+ <th>Currently With</th>
+ <th>Contact No.</th>
+ <th>Borrowed On</th></tr>";
 
 class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
@@ -51,6 +73,18 @@ catch(PDOException $e) {
 $conn = null;
 echo "</table>";
 ?>
+
+<script>
+	function myFunction() {
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "topnav") {
+		x.className += " responsive";
+	  } else {
+		x.className = "topnav";
+	  }
+	}
+	</script>
+
 
 
 </body>

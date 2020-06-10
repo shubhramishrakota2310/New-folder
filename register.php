@@ -10,10 +10,10 @@
 </head>
 <body>
 <div class="topnav" id="myTopnav">
-	<a href="#"><img src="TFPS_Logo-1.png" alt=""></a>
-	<a href="register.php"><h3>Register</h3></a>
 	<a href="equipments.php"><h3>View Equipments</h3></a>
 	<a href="./qrDNT"><h3>Borrow </h3></a>
+	<a href="register.php"><h3>Sign up</h3></a>
+	<a href="login.php"><h3>Sign in</h3></a>
 	<a href="javascript:void(0);" class="icon"
 	onclick="myFunction()">
     <i class="fa fa-bars"></i>
@@ -50,7 +50,8 @@
 			<input type="text" name="rollno" placeholder = "Institute Roll Number">
 		</div>
 		<div class="input-group">
-			<input type="button" class="btn" name="reg_user" value="Sign up">
+		<button type="submit" class="btn" name="reg_user">Lets Go</button>
+		<div class=logIn_option><a href="login.php">Already a member? <span>Log in</span></a></div>
 		</div>
 	</form>
 	</div>
