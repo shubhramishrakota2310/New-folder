@@ -50,7 +50,7 @@
 			<input type="text" name="rollno" placeholder = "Institute Roll Number">
 		</div>
 		<div class="input-group">
-		<button type="submit" class="btn" name="reg_user">Lets Go</button>
+		<button type="submit" class="btn" name="reg_user">Register</button>
 		<div class=logIn_option><a href="login.php">Already a member? <span>Log in</span></a></div>
 		</div>
 	</form>

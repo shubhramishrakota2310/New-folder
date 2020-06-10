@@ -9,7 +9,7 @@
 <body>
 
 <div class="topnav" id="myTopnav">
-	<a href="#"><img src="TFPS_Logo-1.png" alt=""></a>
+	
 	<a href="equipments.php"><h3>View Equipments</h3></a>
 	<a href="./qrDNT"><h3>Borrow </h3></a>
 	<a href="register.php"><h3>Sign up</h3></a>
