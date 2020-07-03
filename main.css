@@ -78,7 +78,7 @@
 			background-size: cover;
 			color: #333;
 			text-align: center;
-			padding-bottom: 4em;
+			padding-bottom: 1em;
 		}
 		
 		header {
@@ -110,6 +110,10 @@
 			position: relative;
 			z-index: 1;
 			
+		}
+		h2 {
+			margin: 0;
+			padding: 1em;
 		}
 		
 		
@@ -209,9 +213,11 @@
 		
 		.right-col {
 			text-align: center;
-			margin: 0;
+			margin: 0 0;
+			padding: 1em;
 			height: 200px;
 			color: #333;
+			background-color: #FDC1B5;
 		}
 		
 		
@@ -334,9 +340,7 @@
 				grid-area: bowl;
 			}
 		
-			h2 {
-				margin: 0;
-			}
+			
 		
 		}
 
