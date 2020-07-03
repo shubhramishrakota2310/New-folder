@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="topnav" id="myTopnav">
-	<a href="equipments.php"><h3>View Equipments</h3></a>
+	<a href="equipments2.php"><h3>View Equipments</h3></a>
 	<a href="./qrDNT"><h3>Borrow </h3></a>
 	<a href="register.php"><h3>Sign up</h3></a>
 	<a href="login.php"><h3>Sign in</h3></a>
