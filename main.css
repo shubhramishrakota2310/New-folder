@@ -184,6 +184,10 @@
 			background-color: #F1F5FD;
 		}
 		
+		input[type=button]:hover {
+			background-color: #FDC1B5;
+		}
+		
 		.btn {
 			background-color: #4B68A8;
 			border: none;
@@ -205,9 +209,6 @@
 			
 		}
 		
-		input[type=button]:hover {
-			background-color: #FDC1B5;
-		}
 		
 		
 		
@@ -270,6 +271,45 @@
 			.form-container {
 				margin: 2em -4em 0;
 			}
+
+			input[type=text] {
+			border: 1px solid #CDECE6;
+			width: 70%;
+			padding: 1em;
+			box-sizing: border-box;
+			border-radius: 1em;
+			margin-top: 1.2em;
+			background-color: #F1F5FD;
+		}
+
+		input[type=email] {
+			border: 1px solid #CDECE6;
+			width: 70%;
+			padding: 1em;
+			box-sizing: border-box;
+			border-radius: 1em;
+			margin-top: 1.2em;
+			background-color: #F1F5FD;
+		}
+		input[type=number] {
+			border: 1px solid #CDECE6;
+			width: 70%;
+			padding: 1em;
+			box-sizing: border-box;
+			border-radius: 1em;
+			margin-top: 1.2em;
+			background-color: #F1F5FD;
+		}
+
+		input[type=password] {
+			border: 1px solid #CDECE6;
+			width: 70%;
+			padding: 1em;
+			box-sizing: border-box;
+			border-radius: 1em;
+			margin-top: 1.2em;
+			background-color: #F1F5FD;
+		}
 		
 		}
 		
@@ -343,16 +383,89 @@
 			
 		
 		}
+		*/
 
 		
 		
 		@media (min-width: 1275px) { 
-			.hero-bg section {
-				width: 45%;
-				margin: 0 15%;
+			.form-container {
+				width: 40%;
+				transform: translateY(-650px);
+			}
+
+			.form-container {
+				background-color: white;
+				margin: 2em 2em 2em 4em;
+				padding: 2em 0;
+				border-radius: 1em;
+				box-shadow: 5px 5px 5px rgba(0,0,0,.2);
+			}
+
+			.top{
+				margin: 0;
+			}
+
+			input[type=text] {
+				border: 1px solid #CDECE6;
+				width: 55%;
+				padding: 1em;
+				box-sizing: border-box;
+				border-radius: 1em;
+				margin-top: 1.2em;
+				background-color: #F1F5FD;
+			}
+	
+			input[type=email] {
+				border: 1px solid #CDECE6;
+				width: 55%;
+				padding: 1em;
+				box-sizing: border-box;
+				border-radius: 1em;
+				margin-top: 1.2em;
+				background-color: #F1F5FD;
+			}
+			input[type=number] {
+				border: 1px solid #CDECE6;
+				width: 55%;
+				padding: 1em;
+				box-sizing: border-box;
+				border-radius: 1em;
+				margin-top: 1.2em;
+				background-color: #F1F5FD;
+			}
+	
+			input[type=password] {
+				border: 1px solid #CDECE6;
+				width: 55%;
+				padding: 1em;
+				box-sizing: border-box;
+				border-radius: 1em;
+				margin-top: 1.2em;
+				background-color: #F1F5FD;
+			}
+
+			.btn {
+				background-color: #4B68A8;
+				border: none;
+				width: 55%;
+				height: auto;
+				color: #f2f2f2;
+				
+				font-weight: bold;
+				padding: 1em 0;
+				border-radius: 1em;
+				font-size: 1em;
+				cursor: pointer;
+				margin-top: 1.2em;
+				margin-bottom: 3em;
+				box-shadow: 
+		   inset 0 -3em 3em rgba(0,0,0,0.1), 
+				 0 0  0 1px #4B68A8,
+				 0.3em 0.3em 1em rgba(0,0,0,0.3);
+				
 			}
 		}
-		*/
+		
 		
 		.top {
 			animation: fadeIn 2s forwards;
