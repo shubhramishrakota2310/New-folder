@@ -3,75 +3,11 @@
 		  margin: 0;
 		  font-family: Arial, Helvetica, sans-serif;
 		}
-	/*Navigation styles*/	
-		.topnav {
-		  overflow: hidden;
-		  background-color: #333;
-		}
-		.topnav img{
-			width: 6em;
-			height: auto;
-			float: left;
+	
 		
-		}
 		
-		.topnav a {
-		  float: right;
-		  display: block;
-		  color: #f2f2f2;
-		  text-align: center;
-		  padding: 5px 16px;
-		  text-decoration: none;
-		  font-size: 0.9em;
-		}
 		
-		.topnav a:hover {
-		  background-color: #FDC1B5;
-		  color: black;
-		}
-		
-		.topnav a.active {
-		  background-color: #333;
-		  color: white;
-		}
-		
-		.topnav .icon {
-		  display: none;
-		}
-		
-		@media screen and (max-width: 750px) {
-		  .topnav a:not(:last-child) {display: none;}
-		  .topnav a.icon {
-			float: right;
-			display: block;
-			margin-right: 0;
-			padding: 15px;
-		  }
-		  .topnav img{
-			display: none;
-		
-		}
-		}
-		
-		@media screen and (max-width: 750px) {
-		  .topnav.responsive {position: relative;}
-		  .topnav.responsive .icon {
-			position: relative;
-			float: right;
-			right: 0;
-			top: 0;
-		  }
-
-		  .topnav img{
-			display: none;
-		
-		}
-		  .topnav.responsive a {
-			float: none;
-			display: block;
-			text-align: right;
-		  }
-		}
+	
   /*Main-div styles*/
 		.hero-bg {
 			background: #CDECE6 ;
@@ -238,7 +174,7 @@
 			width: 100%;
 			padding: 0;
 			display: flex;
-			margin-top: -2.9em;
+		
 
 			
 		}
@@ -269,7 +205,7 @@
 				margin: 0 ;
 			}
 			.form-container {
-				margin: 2em -4em 0;
+				margin: 2em -4em -5em;
 			}
 
 			input[type=text] {
@@ -401,9 +337,7 @@
 				box-shadow: 5px 5px 5px rgba(0,0,0,.2);
 			}
 
-			.top{
-				margin: 0;
-			}
+			
 
 			input[type=text] {
 				border: 1px solid #CDECE6;
