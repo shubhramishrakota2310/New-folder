@@ -42,7 +42,7 @@
 </nav>
 
 <div class="hero-bg">
-	<section class="top">
+	
 
 		</p>
 		<section class="authentic">
@@ -76,7 +76,7 @@
 		</div>
 	</form>
 	</div>
-	</section>
+	
 </div>
 
 </body>
