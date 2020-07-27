@@ -1,34 +1,20 @@
 <?php 
+include('config.php');
 	session_start(); 
 
-	if (!isset($_SESSION['username'])) {
+	if ($_SESSION['user']['role']!='A') {
 		$_SESSION['msg'] = "You must log in first";
-		header('location: ../index.html');
-	}
-	if (isset($_GET['logout'])) {
-		session_destroy();
-		unset($_SESSION['username']);
-		header("location: ../index.html");
+		header('location: ../enter/door.php');
 	}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-<title>Home</title>
+<title>Admin | TFPS</title>
 </head>
 <body>
-
-	<div class="header">
-		<h2>Home Page</h2>
-	</div>
-	<?php  if (isset($_SESSION['username'])) : ?>
-			<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-		<?php endif ?>
-	<div class="content">
-		<a href="features/users.php"><h1>MANAGE MEMBERS</h1></a>
-		<a href="features/products.php"><h1>ADD EQUIPMENTS</h1></a>
-	</div>
-	<a href="<?php echo 'logout.php'; ?>" class="logout-btn">Logout</a>
-
+<a href="features/users.php"><h3>Manage Members</h3></a><br>
+<a href="features/category.php"><h3>Manage Categories</h3></a><br><br>
+<a style="color: red;" href="logout.php">Logout</a>
 </body>
 </html>

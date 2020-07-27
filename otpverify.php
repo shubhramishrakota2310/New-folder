@@ -1,11 +1,18 @@
+<?php 
+include('config.php');
+include('verify.php');
+session_start();
+$otp = $_REQUEST['oid'];
+?>
 <html>
 <head>
-	<title>TFPS EQUIPMENTS</title>
+	<title>TFPS | Verify OTP</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="navbar.css">
 
+	<link rel="stylesheet" href="navbar.css">
+	
 	<script
     src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
@@ -21,13 +28,9 @@
     });
 });
     </script>
-
-
-	
 </head>
 <body>
-
-	<nav>
+<nav>
         <ul class="menu">
             <li class="logo"><a href="index.html"><img src="Group 5.png" alt=""></a></li>
             <li class="item"><a href="equipments2.php">View Equipments</a></li>
@@ -37,36 +40,26 @@
             <li class="toggle"><span class="bars"></span></li>
         </ul>
     </nav>
-
-
 	<div class="hero-bg">
-        <section class="top">
-            <header>
+	
 
-                <h1>TFPS<span>Inventory Page</span></h1>
-            </header>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur nihil aperiam ea id!
-
-            </p>
-            
-        </section>
-    </div>
-     
-    <section class="authentic">
-        <div class="right-col">
-            <h2>Authentic. Awesome.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe veritatis numquam odio architecto iusto! Ducimus!</p>
-        </div>
-        <img src="bg.svg" alt="">
-    </section>
-
-
-
-
-
-
-
-
-
+		</p>
+		<section class="authentic">
+				
+			<img src="bg.svg" alt="">
+		</section>
+	<div class="form-container">
+	<form method="post" action="otpverify.php">
+	<?php include('errors.php'); ?>
+		<div class="input-group">
+			<input type="number" name="otpinp" placeholder="Enter a 5 Digit OTP">
+		</div>
+		<input type="hidden" name="otp" value="<?php echo $otp; ?>">
+		<div class="input-group">
+		<button type="submit" class="btn" name="verify">Verify OTP</button>
+		<div class=logIn_option><a href="login.php">Already a member? <span>Log in</span></a></div>
+		</div>
+	</form>
+	</div>
 </body>
 </html>

@@ -1,4 +1,11 @@
-<?php include('config.php'); ?>
+<?php include('config.php');
+	session_start(); 
+	if ($_SESSION['user']['role']!='U')
+    {
+		$_SESSION['msg'] = "You must log in first";
+		header('location: login.php');
+	}
+?>
 <html>
 <head>
 <title>View Equipments | TFPS</title>	
@@ -6,6 +13,7 @@
 </head>
 <body>
 <?php 
+		$uid = $_SESSION['user']['id'];
      	$q = "SELECT * FROM equipment ORDER BY id asc";
 		$result = mysqli_query($conn,$q);
 ?>
@@ -33,7 +41,7 @@
       			?>
       		  </td>
 		      <td align="center">
-		      	<?php echo $row["name"]; ?>		     
+		      	<a href="vequipp.php?id=<?php echo $row["id"]; ?>"><?php echo $row["name"]; ?></a>	     
 		      </td>
 		      </tr>
 		      <?php } ?>
@@ -64,7 +72,11 @@
 <?php if (mysqli_num_rows($result) =='0') : ?>
 		<h4>No Equipments added yet.</h4>
 <?php endif ?>
+<br>
+<a href="addequip.php">Add Your Equipments</a>
 <br><br>
-<a href="index.html">Back</a>
+<a href="dashboard.php">Back</a>
+<br><br>
+<a style="color: red;" href="logout.php">Logout</a>
 </body>
 </html>

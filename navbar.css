@@ -118,11 +118,11 @@ nav {
         transition:all .25s;
     }
     .button:not(.secondary) a:hover {
-        background: #ddd;
+        background: rgba(68, 187, 102, 0.911);
         border-color: #4B68A8;
     }
     .button.secondary a:hover {
-        color: #ddd;
+        color:  rgba(68, 187, 102, 0.911);
     } 
   }
   

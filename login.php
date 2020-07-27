@@ -1,5 +1,4 @@
-<?php  include('server2.php'); ?>
-
+<?php include('server.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,17 +32,12 @@
         <ul class="menu">
             <li class="logo"><a href="index.html"><img src="Group 5.png" alt=""></a></li>
             <li class="item"><a href="equipments2.php">View Equipments</a></li>
-            <li class="item"><a href="./qrDNT">Borrow</a></li>
             </li>
             <li class="item button"><a href="login.php">Log In</a></li>
             <li class="item button secondary"><a href="register.php">Sign Up</a></li>
             <li class="toggle"><span class="bars"></span></li>
         </ul>
     </nav>
-
-	<?php 
-		$prodid2 = $_POST['prodid1'];  
-	?>
 	<div class="hero-bg">
 	
 
@@ -54,20 +48,16 @@
 		</section>
 	<div class="form-container">
 	<form method="post" action="login.php">
+		<?php include('errors.php');?>
 	<div class="input-group">
 			<input type="text" name="username" placeholder = "Username">
 	</div>
 	<div class="input">
-			<input type="password" name="passcode" placeholder = "Password">
+			<input type="password" name="password" placeholder = "Your Password">
 	</div>
 	<div class="input">
-	<button type="submit" class="btn" name="reg_user">Sign in</button>
-	
-	
+	<button type="submit" class="btn" name="login">Sign in</button>
 	</div>
-	<div class="input">
-           	<input type="hidden" name="prodid3" value="<?php echo $prodid2; ?>">
-    </div>
 	</form>
 	</div>
 	

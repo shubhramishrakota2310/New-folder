@@ -1,25 +1,21 @@
-<?php 
-include('config.php');
+<?php include('config.php');
 	session_start(); 
-
-	if ($_SESSION['user']['role']!='A') {
+	if ($_SESSION['user']['role']!='U')
+    {
 		$_SESSION['msg'] = "You must log in first";
-		header('location: ../enter/door.php');
-	}
-	if (isset($_GET['logout'])) {
-		session_destroy();
-		unset($_SESSION['user']);
-		header("location: ../index.html");
+		header('location: login.php');
 	}
 ?>
-<!DOCTYPE html>
 <html>
 <head>
-	<title>Members | TFPS</title>
+<title>View Members | TFPS</title>	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
 </head>
 <body>
 <?php 
-     	$q = "SELECT * FROM users ORDER BY id asc";
+		$uid = $_SESSION['user']['id'];
+		$yr = $_REQUEST['id'];
+     	$q = "SELECT * FROM users WHERE batch = '$yr' ORDER BY id asc";
 		$result = mysqli_query($conn,$q);
 ?>
 <?php if (mysqli_num_rows($result) !='0') : ?>
@@ -32,11 +28,9 @@ include('config.php');
 		      <thead>
 		      <tr>
 		      <th><strong>Member Image</strong></th>
-		      <th><strong>Member Name</strong></th>
+		      <th><strong>Name</strong></th>
 		      <th><strong>Contact Number</strong></th>
-		      <th><strong>Email</strong></th>
-		      <th><strong>Year</strong></th>
-		      <th><strong>Delete</strong></th>
+		      <th><strong>Email Address</strong></th>
 		      </tr>
 		    </thead>
 		    <tbody>
@@ -44,23 +38,21 @@ include('config.php');
 		      while($row = mysqli_fetch_assoc($result)) { ?>
 		      <tr>
 		      <td align="center">
-		      	<img src="../../users/<?php if(empty($row["image"])!='1') { echo $row["image"]; } else { echo "userlogo.png"; } ?>" style="height: 114px; width: 124px;"/>
+		      	<img src="users/<?php if(empty($row["image"])!='1') { echo $row["image"]; } else { echo "userlogo.png"; } ?>" style="height: 114px; width: 124px;"/>
       		  </td>
-		      <td align="center"><?php echo $row["name"]; ?></td>
-		      <td align="center"><?php echo $row["mobile"]; ?></strong>&nbsp;<a href="https://wa.me/91<?php echo $row["mobile"]; ?>?text=Hi <?php echo $row["name"]; ?>"><i class="fa fa-whatsapp fa-2x" style="color: green;" aria-hidden="true"></i></a></td>
+		      <td align="center">
+		      	<?php 
+		      		echo $row["name"];
+		      	?>
+		      </td>
+		      <td align="center"><?php echo $row["mobile"]; ?>&nbsp;<a href="https://wa.me/91<?php echo $row["mobile"]; ?>?text=Hi <?php echo $row["name"]; ?>"><i class="fa fa-whatsapp fa-2x" style="color: green;" aria-hidden="true"></i></a></td>
 		      <td align="center"><?php echo $row["email"]; ?></td>
-		      <td align="center"><?php echo $row["batch"]; ?></td>
-		      <td align="center"><a href="delete.php?id=<?php echo $row["id"]; ?>">Delete</a></td>
 		      </tr>
 		      <?php } ?>
 		    </tbody>
 		    </table>
  		 </div>
-<?php endif ?>
-<?php if (mysqli_num_rows($result) =='0') : ?>
-		<h4>No Members yet.</h4>
-<?php endif ?>
-     <script>
+ 		  <script>
         function myFunction1() {
           var input, filter, table, tr, td, i, txtValue;
           input = document.getElementById("myInput");
@@ -80,8 +72,15 @@ include('config.php');
           }
         }
 	</script>
+<?php endif ?>
+<?php if (mysqli_num_rows($result) =='0') : ?>
+		<h4>No Members.</h4>
+<?php endif ?>
+<br>
+<h4>Invite Friends</h4>
+<a href="whatsapp://send?text=Hey! Register on TFPS using this address" data-action="share/whatsapp/share"><i class="fa fa-whatsapp fa-2x" style="color: green;" aria-hidden="true"></i></a>
 <br><br>
-<a href="../dashboard.php"><h4>Back to Dashboard</h4></a>
+<a href="members.php">Back</a>
 <br><br>
 <a style="color: red;" href="logout.php">Logout</a>
 </body>

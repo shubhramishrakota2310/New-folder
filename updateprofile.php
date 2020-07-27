@@ -1,10 +1,17 @@
-<?php include('config.php'); ?>
-<?php include ('server.php') ?>
-<!DOCTYPE html>
+<?php 
+include('config.php');
+include('update.php');
+session_start();
+$mid = $_REQUEST['id'];
+if ($_SESSION['user']['role'] != "U") 
+{
+    header('location: login.php');
+}
+?>
 <html>
 <head>
-<title>Register | TFPS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TFPS | Update Profile</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -25,8 +32,6 @@
     });
 });
     </script>
-
-
 </head>
 <body>
 <nav>
@@ -38,9 +43,8 @@
             <li class="item button secondary"><a href="register.php">Sign Up</a></li>
             <li class="toggle"><span class="bars"></span></li>
         </ul>
-</nav>
-
-<div class="hero-bg">
+    </nav>
+	<div class="hero-bg">
 	
 
 		</p>
@@ -49,25 +53,28 @@
 			<img src="bg.svg" alt="">
 		</section>
 	<div class="form-container">
-	<form method="post" action="register.php">
+	<h4>Your Account has been successfully Created.</h4>
+	<h5>Update Your account Details</h5>
+	<form method="post" action="updateprofile.php" enctype="multipart/form-data">
 	<?php include('errors.php'); ?>
 		<div class="input-group">
-			<input type="email" name="email" placeholder="Email Address">
+			<input type="text" name="name" placeholder="Your Name">
 		</div>
 		<div class="input-group">
-			<input type="text" name="username" placeholder="Username">
+			<input type="file" name="image" accept="image/*">
 		</div>
 		<div class="input-group">
-			<input type="password" name="passcode" placeholder="Password">
+			<input type="number" name="mobile" placeholder="Your Contact Number">
 		</div>
 		<div class="input-group">
-		<button type="submit" class="btn" name="reg_user">Register</button>
-		<div class=logIn_option><a href="login.php">Already a member? <span>Log in</span></a></div>
+			<input type="text" name="rollno" placeholder="Your Institute Roll Number">
+		</div>
+		<input type="hidden" name="mid" value="<?php echo $mid; ?>">
+		<div class="input-group">
+		<button type="submit" class="btn" name="update">Update My Profile</button>
+		<a href="dashboard.php">Skip</a>
 		</div>
 	</form>
-	</div>
-	
 </div>
-
 </body>
-</form>
+</html>
