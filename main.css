@@ -63,7 +63,7 @@
 		
 		.form-container {
 			background-color: #CDECE6;
-			margin: 0 0 0;
+			margin: 2em 0 0;
 			
 		}
 		
@@ -113,6 +113,26 @@
 			margin-top: 1.2em;
 			background-color: #F1F5FD;
 		}
+		input[type=file] {
+			border: 1px solid #CDECE6;
+			width: 70%;
+			padding: 1em;
+			box-sizing: border-box;
+			border-radius: 1em;
+			margin-top: 1.2em;
+			background-color: #F1F5FD;
+		}
+
+		input[type=number] {
+			border: 1px solid #CDECE6;
+			width: 70%;
+			padding: 1em;
+			box-sizing: border-box;
+			border-radius: 1em;
+			margin-top: 1.2em;
+			background-color: #F1F5FD;
+		}
+
 		
 		.form-container p {
 			color: gray;
@@ -173,13 +193,10 @@
 			margin-left: -.3em;
 		}
 		
-		img {
+		img{
 			width: 100%;
 			padding: 0;
 			display: flex;
-		
-
-			
 		}
 		
 		p {
@@ -208,7 +225,7 @@
 				margin: 0 ;
 			}
 			.form-container {
-				margin: 2em -4em -5em;
+				margin: 10em -4em -5em;
 			}
 
 			input[type=text] {
@@ -334,7 +351,7 @@
 
 			.form-container {
 				background-color: white;
-				margin: 2em 2em 2em 4em;
+				margin: 12em 2em 2em 4em;
 				padding: 2em 0;
 				border-radius: 1em;
 				box-shadow: 5px 5px 5px rgba(0,0,0,.2);
